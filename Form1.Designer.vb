@@ -176,7 +176,7 @@ Partial Class Form1
         '
         'PictureBox1
         '
-        Me.PictureBox1.Image = Global.幸运抽奖.My.Resources.Resources.egg_jpg
+        Me.PictureBox1.Image = Global.幸运抽奖.My.Resources.Resources.egg
         Me.PictureBox1.Location = New System.Drawing.Point(48, 23)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(272, 208)
