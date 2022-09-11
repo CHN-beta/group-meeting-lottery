@@ -39,12 +39,13 @@ Partial Class Form1
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(227, 336)
+        Me.Button1.Location = New System.Drawing.Point(231, 316)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(170, 72)
         Me.Button1.TabIndex = 0
@@ -150,7 +151,6 @@ Partial Class Form1
         'TextBox4
         '
         Me.TextBox4.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.TextBox4.Enabled = False
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.TextBox4.Location = New System.Drawing.Point(217, 240)
         Me.TextBox4.Name = "TextBox4"
@@ -182,6 +182,7 @@ Partial Class Form1
         '
         'Timer1
         '
+        Me.Timer1.Interval = 50
         '
         'Timer2
         '
@@ -195,15 +196,25 @@ Partial Class Form1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(385, 68)
         Me.Label5.TabIndex = 13
-        Me.Label5.Text = "code by 陈浩南@第一小组" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "最后修改于2022年4月18日，基于2021年10月5日统计的组成员信息" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果不是最新版，双击此处或手动访问kkmeetin" &
+        Me.Label5.Text = "code by 陈浩南@第一小组" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "最后修改于2022年4月20日，基于2021年10月5日统计的组成员信息" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "如果不是最新版，双击此处或手动访问kkmeetin" &
     "g.chn.moe下载最新版" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "您也可以访问我的Github获取源代码"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
+        '
+        'Button6
+        '
+        Me.Button6.Location = New System.Drawing.Point(12, 447)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(75, 23)
+        Me.Button6.TabIndex = 14
+        Me.Button6.Text = "导出数据"
+        Me.Button6.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(640, 482)
+        Me.Controls.Add(Me.Button6)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.Label4)
@@ -219,6 +230,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
+        Me.ImeMode = System.Windows.Forms.ImeMode.Disable
         Me.MaximizeBox = False
         Me.Name = "Form1"
         Me.Text = "KK集团大组会抽奖"
@@ -243,4 +255,5 @@ Partial Class Form1
     Friend WithEvents Timer1 As Timer
     Friend WithEvents Timer2 As Timer
     Friend WithEvents Label5 As Label
+    Friend WithEvents Button6 As Button
 End Class

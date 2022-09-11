@@ -14,12 +14,15 @@
         },
         New List(Of String) From
         {
-            "曾鑫龙", "常青", "陈晨", "陈铭禹", "陈子龙", "范洋涛", "费煜晨", "高扬钧", "胡玮琳", "黄飞鸿", "黄家新",
-            "蓝进肾", "李光容", "李锦安", "李迎秋", "林建平", "刘海洋", "刘兴宜", "柳梦宇", "莫炳杰", "聂思晴", "平坦",
-            "曲善直", "檀鹏", "唐唯卿", "万景", "吴建峰", "吴启鹏", "吴维", "吴雪峰", "徐聪卉", "徐望舒", "杨成彪", "叶晓芳",
-            "张爱忠", "张腾", "张耀宗", "张裕祥", "张宗南", "周小龙"
+            "曾鑫龙", "常青", "陈铭禹", "陈子龙", "范洋涛", "费煜晨", "高扬钧", "胡玮琳", "黄飞鸿",
+            "蓝进肾", "李光容", "李锦安", "李迎秋", "林建平", "刘海洋", "柳梦宇", "莫炳杰", "聂思晴",
+            "曲善直", "唐唯卿", "万景", "吴启鹏", "吴维", "吴雪峰", "徐望舒", "杨成彪", "叶晓芳",
+            "张腾", "张裕祥", "张宗南", "周小龙"
         },
-        New List(Of String) From {"赵三", "赵四", "赵五"}
+        New List(Of String) From
+        {
+            "陈晨", "黄家新", "黄昱祺", "刘兴宜", "平坦", "檀鹏", "吴建峰", "徐聪卉", "张爱忠", "张耀宗"
+        }
     }
 
     Private TextBox_(3) As TextBox
@@ -31,6 +34,7 @@
         ' 在 InitializeComponent() 调用之后添加任何初始化。
         TextBox_ = {TextBox1, TextBox2, TextBox3, TextBox4}
         ButtonRegenerate_ = {Button2, Button3, Button4, Button5}
+        OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial
     End Sub
 
     Private Sub set_select_name(i As Integer)
@@ -44,8 +48,7 @@
 
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        'For i As Integer = 0 To 3
-        For i As Integer = 0 To 2
+        For i As Integer = 0 To 3
             set_select_name(i)
         Next
     End Sub
@@ -54,23 +57,20 @@
         If (Timer1.Enabled) Then
             Timer1.Enabled = False
             Button1.Text = "再来一次"
-            'For i As Integer = 0 To 3
-            For i As Integer = 0 To 2
+            For i As Integer = 0 To 3
                 ButtonRegenerate_(i).Visible = True
             Next
         Else
             Timer1.Enabled = True
             Button1.Text = "停！"
-            'For i As Integer = 0 To 3
-            For i As Integer = 0 To 2
+            For i As Integer = 0 To 3
                 ButtonRegenerate_(i).Visible = False
             Next
         End If
     End Sub
 
     Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles Button2.Click, Button3.Click, Button4.Click, Button5.Click
-        'For i As Integer = 0 To 3
-        For i As Integer = 0 To 2
+        For i As Integer = 0 To 3
             If sender Is ButtonRegenerate_(i) Then
                 set_select_name(i)
             End If
@@ -95,5 +95,28 @@
         Catch ex As Exception
             MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
         End Try
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Dim dialog As New SaveFileDialog With {.Filter = "Excel 工作簿|*.xlsx", .Title = "保存为excel", .FileName = "成员名单"}
+        Dim result = dialog.ShowDialog()
+        If result = DialogResult.OK Then
+            Try
+                If FileIO.FileSystem.FileExists(dialog.FileName) Then FileIO.FileSystem.DeleteFile(dialog.FileName)
+                Dim file As New OfficeOpenXml.ExcelPackage(dialog.FileName)
+                Dim sheet = file.Workbook.Worksheets.Add("分组名单")
+                For i As Integer = 0 To 3
+                    Dim c = Chr(Asc("A"c) + i)
+                    sheet.Cells(c + "1").Value = "第" + Convert.ToString(i + 1) + "小组"
+                    For j As Integer = 0 To Students_(i).Count - 1
+                        sheet.Cells(c + Convert.ToString(j + 2)).Value = Students_(i)(j)
+                    Next
+                Next
+                file.Save()
+                MsgBox("保存成功")
+            Catch ex As Exception
+                MsgBox("保存失败")
+            End Try
+        End If
     End Sub
 End Class
