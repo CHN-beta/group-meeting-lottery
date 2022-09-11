@@ -1,5 +1,5 @@
 ﻿Public Class Form1
-    Private Students_() As List(Of String) =
+    Private Students_ As New List(Of List(Of String)) From
     {
         New List(Of String) From
         {
@@ -24,6 +24,7 @@
             "陈晨", "黄家新", "黄昱祺", "刘兴宜", "平坦", "檀鹏", "吴建峰", "徐聪卉", "张爱忠", "张耀宗"
         }
     }
+    Private StudentsUsed_ As New List(Of List(Of String)) From {New List(Of String), New List(Of String), New List(Of String), New List(Of String)}
 
     Private TextBox_(3) As TextBox
     Private ButtonRegenerate_(3) As Button
@@ -40,12 +41,23 @@
     Private Sub set_select_name(i As Integer)
         Dim rand As New Random
         Dim current_text = TextBox_(i).Text
-        While current_text = TextBox_(i).Text
+        While TextBox_(i).Text = current_text And (Students_(i).Count > 1 Or TextBox_(i).Text <> Students_(i)(0))
             TextBox_(i).Text = Students_(i)(rand.Next(0, Students_(i).Count))
         End While
         TextBox_(i).Refresh()
     End Sub
 
+    Private Sub move_to_used(i As Integer, name As String)
+        If CheckBox1.Checked And Students_(i).Contains(name) Then
+            If Students_(i).Count > 1 Then
+                Students_(i).Remove(name)
+                StudentsUsed_(i).Add(name)
+            Else
+                Students_(i).AddRange(StudentsUsed_(i))
+                StudentsUsed_(i).Clear()
+            End If
+        End If
+    End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
         For i As Integer = 0 To 3
@@ -56,6 +68,9 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (Timer1.Enabled) Then
             Timer1.Enabled = False
+            For i As Integer = 0 To 3
+                move_to_used(i, TextBox_(i).Text)
+            Next
             Button1.Text = "再来一次"
             For i As Integer = 0 To 3
                 ButtonRegenerate_(i).Visible = True
@@ -73,6 +88,7 @@
         For i As Integer = 0 To 3
             If sender Is ButtonRegenerate_(i) Then
                 set_select_name(i)
+                move_to_used(i, TextBox_(i).Text)
             End If
         Next
     End Sub
@@ -89,13 +105,6 @@
         ' End If
     End Sub
 
-    Private Sub Label5_DoubleClick(sender As Object, e As EventArgs) Handles Label5.DoubleClick
-        Try
-            Process.Start(New ProcessStartInfo("https://kkmeeting.chn.moe") With {.UseShellExecute = True})
-        Catch ex As Exception
-            MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
-        End Try
-    End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim dialog As New SaveFileDialog With {.Filter = "Excel 工作簿|*.xlsx", .Title = "保存为excel", .FileName = "成员名单"}
@@ -118,5 +127,28 @@
                 MsgBox("保存失败")
             End Try
         End If
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Try
+            Process.Start(New ProcessStartInfo("https://kkmeeting.chn.moe") With {.UseShellExecute = True})
+        Catch ex As Exception
+            MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
+        End Try
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        Try
+            Process.Start(New ProcessStartInfo("https://github.com/CHN-beta/group-meeting-lottery") With {.UseShellExecute = True})
+        Catch ex As Exception
+            MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
+        End Try
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        For i As Integer = 0 To 3
+            Students_(i).AddRange(StudentsUsed_(i))
+            StudentsUsed_(i).Clear()
+        Next
     End Sub
 End Class
