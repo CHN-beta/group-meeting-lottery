@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports Accessibility
+
+Public Class Form1
     Private Students_ As New List(Of List(Of String)) From
     {
         New List(Of String) From
@@ -109,6 +111,11 @@
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
         Dim dialog As New SaveFileDialog With {.Filter = "Excel 工作簿|*.xlsx", .Title = "保存为excel", .FileName = "成员名单"}
         Dim result = dialog.ShowDialog()
+        Dim students As New List(Of List(Of String))
+        students = Students_
+        For i As Integer = 0 To 3
+            students(i).AddRange(StudentsUsed_(i))
+        Next
         If result = DialogResult.OK Then
             Try
                 If FileIO.FileSystem.FileExists(dialog.FileName) Then FileIO.FileSystem.DeleteFile(dialog.FileName)
@@ -117,8 +124,8 @@
                 For i As Integer = 0 To 3
                     Dim c = Chr(Asc("A"c) + i)
                     sheet.Cells(c + "1").Value = "第" + Convert.ToString(i + 1) + "小组"
-                    For j As Integer = 0 To Students_(i).Count - 1
-                        sheet.Cells(c + Convert.ToString(j + 2)).Value = Students_(i)(j)
+                    For j As Integer = 0 To students(i).Count - 1
+                        sheet.Cells(c + Convert.ToString(j + 2)).Value = students(i)(j)
                     Next
                 Next
                 file.Save()
