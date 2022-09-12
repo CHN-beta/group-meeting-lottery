@@ -8,6 +8,7 @@
     <MyType>WindowsForms</MyType>
     <OptionStrict>On</OptionStrict>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <ApplicationIcon>index.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -19,6 +20,10 @@
     <NoWarn />
     <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="index.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Windows.Forms" />
