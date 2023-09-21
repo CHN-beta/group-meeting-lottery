@@ -5,38 +5,38 @@ Public Class Form1
     {
         New List(Of String) From
         {
-            "蔡文为", "蔡叶杭", "陈秉桓", "陈柏逸", "陈瀚", "陈浩南", "陈俊鑫", "陈心路", "付星瑞", "郭斌", "郭中丽",
-            "胡汛", "江莹", "李鹏岗", "林泽锋", "刘国振", "刘璐", "刘志强", "卢诗强", "邱鸿伟", "沈鹏", "石澜", "唐锐凡",
-            "唐燕", "王豪", "王丽兰", "王永嘉", "项磊磊", "闫金健", "杨谦益", "张宏烨", "赵珊珊", "赵政仰", "钟志白", "周其程"
+           "李鹏岗", "唐燕", "沈鹏", "陈心路", "赵珊珊", "郭中丽", "林科闯", "闫金健", "江莹", "陈浩南",
+            "蔡叶杭", "林泽锋", "周其程", "石澜", "胡汛", "邱鸿伟", "杨谦益", "王豪", "陈柏逸", "刘志强",
+            "赵政仰", "项磊磊", "付星瑞", "黄敏", "刘祥炜", "王轶蒙", "杨仕铌", "余路成", "朱玲俐", "杨攀",
+            "高郁捷", "莫梦月", "徐溢聪", "张林珏", "陈芳琦", "许腾飞", "黄研培", "厉亚凯", "谈奇灵", "马雯",
+            "姚隽祺", "张恩铭"
         },
         New List(Of String) From
         {
-            "邓铁龙", "杜颖", "黄鑫", "林高翔", "楼伟涛", "曲真魁", "萨娜", "沈晓鑫", "汤昊", "吐尔洪江 吾拉木 ", "王小丹",
-            "王紫云", "向阳", "邢欢", "许书逸", "张晓娟", "赵经天", "郑力诚"
+            "吐尔洪江·吾拉木", "萨娜", "王小丹", "林高翔", "邓铁龙", "许书逸", "张晓娟", "邢欢", "黄鑫", "沈晓鑫",
+            "曲真魁", "楼伟涛", "杜颖", "汤昊", "向阳", "周亮", "鲁浩伟", "梁雁彤", "杨仁琪", "陈豪飞",
+            "张润涵"
         },
         New List(Of String) From
         {
-            "曾鑫龙", "常青", "陈铭禹", "陈子龙", "范洋涛", "费煜晨", "高扬钧", "胡玮琳", "黄飞鸿",
-            "蓝进肾", "李光容", "李锦安", "李迎秋", "林建平", "刘海洋", "柳梦宇", "莫炳杰", "聂思晴",
-            "曲善直", "唐唯卿", "万景", "吴启鹏", "吴维", "吴雪峰", "徐望舒", "杨成彪", "叶晓芳",
-            "张腾", "张裕祥", "张宗南", "周小龙"
-        },
-        New List(Of String) From
-        {
-            "陈晨", "黄家新", "黄昱祺", "刘兴宜", "平坦", "檀鹏", "吴建峰", "徐聪卉", "张爱忠", "张耀宗"
+            "莫炳杰", "吴雪峰", "刘海洋", "张宗南", "张裕祥", "蓝进肾", "叶晓芳", "周江鹏", "柳梦宇", "费煜晨",
+            "万景", "檀鹏", "陈晨", "吴启鹏", "黄飞鸿", "胡玮琳", "杨成彪", "李迎秋", "平坦", "曲善直",
+            "陈子龙", "陈铭禹", "李锦安", "高扬钧", "吴维", "张腾", "常青", "张爱忠", "张耀宗", "黄家新",
+            "姚文龙", "张为智", "黄昱祺", "郑一帆", "马梦薇", "程安琪", "张晨昊", "危永平", "叶颖", "周博语",
+            "刘敏", "吴世明", "刘源 ", "程可扬", "宋欣格", "李文翔"
         }
     }
-    Private StudentsUsed_ As New List(Of List(Of String)) From {New List(Of String), New List(Of String), New List(Of String), New List(Of String)}
+    Private StudentsUsed_ As New List(Of List(Of String)) From {New List(Of String), New List(Of String), New List(Of String)}
 
-    Private TextBox_(3) As TextBox
-    Private ButtonRegenerate_(3) As Button
+    Private TextBox_(2) As TextBox
+    Private ButtonRegenerate_(2) As Button
 
     Public Sub New()
         ' 此调用是设计器所必需的。
         InitializeComponent()
         ' 在 InitializeComponent() 调用之后添加任何初始化。
-        TextBox_ = {TextBox1, TextBox2, TextBox3, TextBox4}
-        ButtonRegenerate_ = {Button2, Button3, Button4, Button5}
+        TextBox_ = {TextBox1, TextBox2, TextBox3}
+        ButtonRegenerate_ = {Button2, Button3, Button4}
         OfficeOpenXml.ExcelPackage.LicenseContext = OfficeOpenXml.LicenseContext.NonCommercial
     End Sub
 
@@ -62,7 +62,7 @@ Public Class Form1
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        For i As Integer = 0 To 3
+        For i As Integer = 0 To 2
             set_select_name(i)
         Next
     End Sub
@@ -70,24 +70,24 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         If (Timer1.Enabled) Then
             Timer1.Enabled = False
-            For i As Integer = 0 To 3
+            For i As Integer = 0 To 2
                 move_to_used(i, TextBox_(i).Text)
             Next
             Button1.Text = "再来一次"
-            For i As Integer = 0 To 3
+            For i As Integer = 0 To 2
                 ButtonRegenerate_(i).Visible = True
             Next
         Else
             Timer1.Enabled = True
             Button1.Text = "停！"
-            For i As Integer = 0 To 3
+            For i As Integer = 0 To 2
                 ButtonRegenerate_(i).Visible = False
             Next
         End If
     End Sub
 
-    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles Button2.Click, Button3.Click, Button4.Click, Button5.Click
-        For i As Integer = 0 To 3
+    Private Sub ButtonRefresh_Click(sender As Object, e As EventArgs) Handles Button2.Click, Button3.Click, Button4.Click
+        For i As Integer = 0 To 2
             If sender Is ButtonRegenerate_(i) Then
                 set_select_name(i)
                 move_to_used(i, TextBox_(i).Text)
@@ -96,9 +96,25 @@ Public Class Form1
     End Sub
 
     Private Sub Timer2_Tick(sender As Object, e As EventArgs) Handles Timer2.Tick
-        If Not Timer1.Enabled AndAlso TextBox_(0).Text.StartsWith("陈浩") Then
-            TextBox_(0).Text = "陈浩" + New List(Of String) From {"东", "西", "南", "北"}((New Random).Next(0, 4))
-            TextBox_(0).Refresh()
+        If Not Timer1.Enabled Then
+            If TextBox_(0).Text.StartsWith("陈浩") Then
+                TextBox_(0).Text = "陈浩" + New List(Of String) From {"东", "西", "南", "北"}((New Random).Next(0, 4))
+                TextBox_(0).Refresh()
+            ElseIf TextBox_(0).Text.StartsWith("陈心") Then
+                If (New Random).Next(0, 4) = 0 Then
+                    TextBox_(0).Text = "陈心街"
+                Else
+                    TextBox_(0).Text = "陈心路"
+                End If
+                TextBox_(0).Refresh()
+            ElseIf TextBox_(0).Text = "闫金健" Or TextBox_(0).Text = "闫银健" Then
+                If (New Random).Next(0, 4) = 0 Then
+                    TextBox_(0).Text = "闫银健"
+                Else
+                    TextBox_(0).Text = "闫金健"
+                End If
+                TextBox_(0).Refresh()
+            End If
         End If
         ' If Me.Text = "" Then
         '     Me.Text = "激★情★大★抽★奖"
@@ -113,7 +129,7 @@ Public Class Form1
         Dim result = dialog.ShowDialog()
         Dim students As New List(Of List(Of String))
         students = Students_
-        For i As Integer = 0 To 3
+        For i As Integer = 0 To 2
             students(i).AddRange(StudentsUsed_(i))
         Next
         If result = DialogResult.OK Then
@@ -121,7 +137,7 @@ Public Class Form1
                 If FileIO.FileSystem.FileExists(dialog.FileName) Then FileIO.FileSystem.DeleteFile(dialog.FileName)
                 Dim file As New OfficeOpenXml.ExcelPackage(dialog.FileName)
                 Dim sheet = file.Workbook.Worksheets.Add("分组名单")
-                For i As Integer = 0 To 3
+                For i As Integer = 0 To 2
                     Dim c = Chr(Asc("A"c) + i)
                     sheet.Cells(c + "1").Value = "第" + Convert.ToString(i + 1) + "小组"
                     For j As Integer = 0 To students(i).Count - 1
@@ -153,7 +169,7 @@ Public Class Form1
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        For i As Integer = 0 To 3
+        For i As Integer = 0 To 2
             Students_(i).AddRange(StudentsUsed_(i))
             StudentsUsed_(i).Clear()
         Next
