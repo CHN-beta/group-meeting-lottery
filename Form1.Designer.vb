@@ -22,231 +22,230 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.SuspendLayout
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(231, 249)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(170, 72)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "开始抽奖"
-        Me.Button1.UseVisualStyleBackColor = true
-        '
-        'Button2
-        '
-        Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button2.Location = New System.Drawing.Point(421, 38)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(147, 60)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "换一个"
-        Me.Button2.UseVisualStyleBackColor = true
-        Me.Button2.Visible = false
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = true
-        Me.Label1.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(51, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 46)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "第一小组"
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox1.Location = New System.Drawing.Point(217, 42)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = true
-        Me.TextBox1.Size = New System.Drawing.Size(198, 52)
-        Me.TextBox1.TabIndex = 3
-        Me.TextBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'TextBox2
-        '
-        Me.TextBox2.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox2.Location = New System.Drawing.Point(217, 108)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.ReadOnly = true
-        Me.TextBox2.Size = New System.Drawing.Size(198, 52)
-        Me.TextBox2.TabIndex = 6
-        Me.TextBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = true
-        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(51, 111)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(160, 46)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "第二小组"
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button3.Location = New System.Drawing.Point(421, 104)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(147, 60)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "换一个"
-        Me.Button3.UseVisualStyleBackColor = true
-        Me.Button3.Visible = false
-        '
-        'TextBox3
-        '
-        Me.TextBox3.BackColor = System.Drawing.SystemColors.HighlightText
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.TextBox3.Location = New System.Drawing.Point(217, 174)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.ReadOnly = true
-        Me.TextBox3.Size = New System.Drawing.Size(198, 52)
-        Me.TextBox3.TabIndex = 9
-        Me.TextBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = true
-        Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(51, 177)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(160, 46)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "第三小组"
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft YaHei UI", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Button4.Location = New System.Drawing.Point(421, 170)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(147, 60)
-        Me.Button4.TabIndex = 7
-        Me.Button4.Text = "换一个"
-        Me.Button4.UseVisualStyleBackColor = true
-        Me.Button4.Visible = false
-        '
-        'Timer1
-        '
-        Me.Timer1.Interval = 50
-        '
-        'Timer2
-        '
-        Me.Timer2.Enabled = true
-        Me.Timer2.Interval = 500
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = true
-        Me.Label5.Location = New System.Drawing.Point(352, 437)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(244, 17)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "code by 陈浩南@第一小组 2022年9月22日"
-        Me.Label5.TextAlign = System.Drawing.ContentAlignment.TopRight
-        '
-        'Button6
-        '
-        Me.Button6.Location = New System.Drawing.Point(109, 434)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(107, 23)
-        Me.Button6.TabIndex = 14
-        Me.Button6.Text = "导出名单到excel"
-        Me.Button6.UseVisualStyleBackColor = true
-        '
-        'CheckBox1
-        '
-        Me.CheckBox1.AutoSize = true
-        Me.CheckBox1.Checked = true
-        Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(78, 327)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(471, 38)
-        Me.CheckBox1.TabIndex = 15
-        Me.CheckBox1.Text = "尽量避免重复"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"（已经抽到过的人将不再被抽到，除非程序被重启或那个小组的人都轮换了一遍。）"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)
-        Me.CheckBox1.UseVisualStyleBackColor = true
-        '
-        'Button7
-        '
-        Me.Button7.Location = New System.Drawing.Point(12, 406)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(81, 23)
-        Me.Button7.TabIndex = 16
-        Me.Button7.Text = "下载最新版"
-        Me.Button7.UseVisualStyleBackColor = true
-        '
-        'Button8
-        '
-        Me.Button8.Location = New System.Drawing.Point(12, 434)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(81, 23)
-        Me.Button8.TabIndex = 17
-        Me.Button8.Text = "获取源代码"
-        Me.Button8.UseVisualStyleBackColor = true
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = true
-        Me.Label6.Location = New System.Drawing.Point(99, 409)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(181, 17)
-        Me.Label6.TabIndex = 18
-        Me.Label6.Text = "或手动访问kkmeeting.chn.moe"
-        '
-        'Form1
-        '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(7!, 17!)
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(608, 464)
-        Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button7)
-        Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button6)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
-        Me.ImeMode = System.Windows.Forms.ImeMode.Disable
-        Me.MaximizeBox = false
-        Me.Name = "Form1"
-        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "KK集团大组会抽奖"
-        Me.ResumeLayout(false)
-        Me.PerformLayout
-
-End Sub
+        components = New ComponentModel.Container()
+        Button1 = New Button()
+        Button2 = New Button()
+        Label1 = New Label()
+        TextBox1 = New TextBox()
+        TextBox2 = New TextBox()
+        Label2 = New Label()
+        Button3 = New Button()
+        TextBox3 = New TextBox()
+        Label3 = New Label()
+        Button4 = New Button()
+        Timer1 = New Timer(components)
+        Timer2 = New Timer(components)
+        Label5 = New Label()
+        Button6 = New Button()
+        CheckBox1 = New CheckBox()
+        Button7 = New Button()
+        Button8 = New Button()
+        Label6 = New Label()
+        SuspendLayout()
+        ' 
+        ' Button1
+        ' 
+        Button1.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Button1.Location = New Drawing.Point(231, 249)
+        Button1.Name = "Button1"
+        Button1.Size = New Drawing.Size(170, 72)
+        Button1.TabIndex = 0
+        Button1.Text = "开始抽奖"
+        Button1.UseVisualStyleBackColor = True
+        ' 
+        ' Button2
+        ' 
+        Button2.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Button2.Location = New Drawing.Point(421, 38)
+        Button2.Name = "Button2"
+        Button2.Size = New Drawing.Size(147, 60)
+        Button2.TabIndex = 1
+        Button2.Text = "换一个"
+        Button2.UseVisualStyleBackColor = True
+        Button2.Visible = False
+        ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Label1.Location = New Drawing.Point(51, 45)
+        Label1.Name = "Label1"
+        Label1.Size = New Drawing.Size(160, 46)
+        Label1.TabIndex = 2
+        Label1.Text = "第一小组"
+        ' 
+        ' TextBox1
+        ' 
+        TextBox1.BackColor = Drawing.SystemColors.HighlightText
+        TextBox1.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        TextBox1.Location = New Drawing.Point(217, 42)
+        TextBox1.Name = "TextBox1"
+        TextBox1.ReadOnly = True
+        TextBox1.Size = New Drawing.Size(198, 52)
+        TextBox1.TabIndex = 3
+        TextBox1.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' TextBox2
+        ' 
+        TextBox2.BackColor = Drawing.SystemColors.HighlightText
+        TextBox2.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        TextBox2.Location = New Drawing.Point(217, 108)
+        TextBox2.Name = "TextBox2"
+        TextBox2.ReadOnly = True
+        TextBox2.Size = New Drawing.Size(198, 52)
+        TextBox2.TabIndex = 6
+        TextBox2.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label2
+        ' 
+        Label2.AutoSize = True
+        Label2.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Label2.Location = New Drawing.Point(51, 111)
+        Label2.Name = "Label2"
+        Label2.Size = New Drawing.Size(160, 46)
+        Label2.TabIndex = 5
+        Label2.Text = "第二小组"
+        ' 
+        ' Button3
+        ' 
+        Button3.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Button3.Location = New Drawing.Point(421, 104)
+        Button3.Name = "Button3"
+        Button3.Size = New Drawing.Size(147, 60)
+        Button3.TabIndex = 4
+        Button3.Text = "换一个"
+        Button3.UseVisualStyleBackColor = True
+        Button3.Visible = False
+        ' 
+        ' TextBox3
+        ' 
+        TextBox3.BackColor = Drawing.SystemColors.HighlightText
+        TextBox3.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        TextBox3.Location = New Drawing.Point(217, 174)
+        TextBox3.Name = "TextBox3"
+        TextBox3.ReadOnly = True
+        TextBox3.Size = New Drawing.Size(198, 52)
+        TextBox3.TabIndex = 9
+        TextBox3.TextAlign = HorizontalAlignment.Center
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Label3.Location = New Drawing.Point(51, 177)
+        Label3.Name = "Label3"
+        Label3.Size = New Drawing.Size(160, 46)
+        Label3.TabIndex = 8
+        Label3.Text = "第三小组"
+        ' 
+        ' Button4
+        ' 
+        Button4.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
+        Button4.Location = New Drawing.Point(421, 170)
+        Button4.Name = "Button4"
+        Button4.Size = New Drawing.Size(147, 60)
+        Button4.TabIndex = 7
+        Button4.Text = "换一个"
+        Button4.UseVisualStyleBackColor = True
+        Button4.Visible = False
+        ' 
+        ' Timer1
+        ' 
+        Timer1.Interval = 50
+        ' 
+        ' Timer2
+        ' 
+        Timer2.Enabled = True
+        Timer2.Interval = 500
+        ' 
+        ' Label5
+        ' 
+        Label5.AutoSize = True
+        Label5.Location = New Drawing.Point(352, 437)
+        Label5.Name = "Label5"
+        Label5.Size = New Drawing.Size(244, 17)
+        Label5.TabIndex = 13
+        Label5.Text = "code by 陈浩南@第一小组 2023年9月21日"
+        Label5.TextAlign = Drawing.ContentAlignment.TopRight
+        ' 
+        ' Button6
+        ' 
+        Button6.Location = New Drawing.Point(109, 434)
+        Button6.Name = "Button6"
+        Button6.Size = New Drawing.Size(107, 23)
+        Button6.TabIndex = 14
+        Button6.Text = "导出名单到excel"
+        Button6.UseVisualStyleBackColor = True
+        ' 
+        ' CheckBox1
+        ' 
+        CheckBox1.AutoSize = True
+        CheckBox1.Checked = True
+        CheckBox1.CheckState = CheckState.Checked
+        CheckBox1.Location = New Drawing.Point(78, 327)
+        CheckBox1.Name = "CheckBox1"
+        CheckBox1.Size = New Drawing.Size(471, 38)
+        CheckBox1.TabIndex = 15
+        CheckBox1.Text = "尽量避免重复" & vbCrLf & "（已经抽到过的人将不再被抽到，除非程序被重启或那个小组的人都轮换了一遍。）" & vbCrLf
+        CheckBox1.UseVisualStyleBackColor = True
+        ' 
+        ' Button7
+        ' 
+        Button7.Location = New Drawing.Point(12, 406)
+        Button7.Name = "Button7"
+        Button7.Size = New Drawing.Size(81, 23)
+        Button7.TabIndex = 16
+        Button7.Text = "下载最新版"
+        Button7.UseVisualStyleBackColor = True
+        ' 
+        ' Button8
+        ' 
+        Button8.Location = New Drawing.Point(12, 434)
+        Button8.Name = "Button8"
+        Button8.Size = New Drawing.Size(81, 23)
+        Button8.TabIndex = 17
+        Button8.Text = "获取源代码"
+        Button8.UseVisualStyleBackColor = True
+        ' 
+        ' Label6
+        ' 
+        Label6.AutoSize = True
+        Label6.Location = New Drawing.Point(99, 409)
+        Label6.Name = "Label6"
+        Label6.Size = New Drawing.Size(181, 17)
+        Label6.TabIndex = 18
+        Label6.Text = "或手动访问kkmeeting.chn.moe"
+        ' 
+        ' Form1
+        ' 
+        AutoScaleDimensions = New Drawing.SizeF(7F, 17F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Drawing.Size(608, 464)
+        Controls.Add(Label6)
+        Controls.Add(Button8)
+        Controls.Add(Button7)
+        Controls.Add(CheckBox1)
+        Controls.Add(Button6)
+        Controls.Add(Label5)
+        Controls.Add(TextBox3)
+        Controls.Add(Label3)
+        Controls.Add(Button4)
+        Controls.Add(TextBox2)
+        Controls.Add(Label2)
+        Controls.Add(Button3)
+        Controls.Add(TextBox1)
+        Controls.Add(Label1)
+        Controls.Add(Button2)
+        Controls.Add(Button1)
+        FormBorderStyle = FormBorderStyle.Fixed3D
+        ImeMode = ImeMode.Disable
+        MaximizeBox = False
+        Name = "Form1"
+        StartPosition = FormStartPosition.CenterScreen
+        Text = "KK集团大组会抽奖"
+        ResumeLayout(False)
+        PerformLayout()
+    End Sub
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
