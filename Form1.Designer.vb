@@ -46,7 +46,7 @@ Partial Class Form1
         ' Button1
         ' 
         Button1.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-        Button1.Location = New Drawing.Point(231, 249)
+        Button1.Location = New Drawing.Point(256, 252)
         Button1.Name = "Button1"
         Button1.Size = New Drawing.Size(170, 72)
         Button1.TabIndex = 0
@@ -56,7 +56,7 @@ Partial Class Form1
         ' Button2
         ' 
         Button2.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-        Button2.Location = New Drawing.Point(421, 38)
+        Button2.Location = New Drawing.Point(479, 38)
         Button2.Name = "Button2"
         Button2.Size = New Drawing.Size(147, 60)
         Button2.TabIndex = 1
@@ -81,7 +81,7 @@ Partial Class Form1
         TextBox1.Location = New Drawing.Point(217, 42)
         TextBox1.Name = "TextBox1"
         TextBox1.ReadOnly = True
-        TextBox1.Size = New Drawing.Size(198, 52)
+        TextBox1.Size = New Drawing.Size(256, 52)
         TextBox1.TabIndex = 3
         TextBox1.TextAlign = HorizontalAlignment.Center
         ' 
@@ -92,7 +92,7 @@ Partial Class Form1
         TextBox2.Location = New Drawing.Point(217, 108)
         TextBox2.Name = "TextBox2"
         TextBox2.ReadOnly = True
-        TextBox2.Size = New Drawing.Size(198, 52)
+        TextBox2.Size = New Drawing.Size(256, 52)
         TextBox2.TabIndex = 6
         TextBox2.TextAlign = HorizontalAlignment.Center
         ' 
@@ -109,7 +109,7 @@ Partial Class Form1
         ' Button3
         ' 
         Button3.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-        Button3.Location = New Drawing.Point(421, 104)
+        Button3.Location = New Drawing.Point(479, 104)
         Button3.Name = "Button3"
         Button3.Size = New Drawing.Size(147, 60)
         Button3.TabIndex = 4
@@ -124,7 +124,7 @@ Partial Class Form1
         TextBox3.Location = New Drawing.Point(217, 174)
         TextBox3.Name = "TextBox3"
         TextBox3.ReadOnly = True
-        TextBox3.Size = New Drawing.Size(198, 52)
+        TextBox3.Size = New Drawing.Size(256, 52)
         TextBox3.TabIndex = 9
         TextBox3.TextAlign = HorizontalAlignment.Center
         ' 
@@ -141,7 +141,7 @@ Partial Class Form1
         ' Button4
         ' 
         Button4.Font = New Drawing.Font("Microsoft YaHei UI", 26.25F, Drawing.FontStyle.Regular, Drawing.GraphicsUnit.Point)
-        Button4.Location = New Drawing.Point(421, 170)
+        Button4.Location = New Drawing.Point(479, 170)
         Button4.Name = "Button4"
         Button4.Size = New Drawing.Size(147, 60)
         Button4.TabIndex = 7
@@ -161,7 +161,7 @@ Partial Class Form1
         ' Label5
         ' 
         Label5.AutoSize = True
-        Label5.Location = New Drawing.Point(352, 437)
+        Label5.Location = New Drawing.Point(413, 440)
         Label5.Name = "Label5"
         Label5.Size = New Drawing.Size(244, 17)
         Label5.TabIndex = 13
@@ -182,7 +182,7 @@ Partial Class Form1
         CheckBox1.AutoSize = True
         CheckBox1.Checked = True
         CheckBox1.CheckState = CheckState.Checked
-        CheckBox1.Location = New Drawing.Point(78, 327)
+        CheckBox1.Location = New Drawing.Point(106, 330)
         CheckBox1.Name = "CheckBox1"
         CheckBox1.Size = New Drawing.Size(471, 38)
         CheckBox1.TabIndex = 15
@@ -218,9 +218,9 @@ Partial Class Form1
         ' 
         ' Form1
         ' 
-        AutoScaleDimensions = New Drawing.SizeF(7F, 17F)
+        AutoScaleDimensions = New Drawing.SizeF(7.0F, 17.0F)
         AutoScaleMode = AutoScaleMode.Font
-        ClientSize = New Drawing.Size(608, 464)
+        ClientSize = New Drawing.Size(669, 464)
         Controls.Add(Label6)
         Controls.Add(Button8)
         Controls.Add(Button7)
