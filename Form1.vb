@@ -1,29 +1,28 @@
-﻿Imports Accessibility
-
-Public Class Form1
+﻿Public Class Form1
     Private Students_ As New List(Of List(Of String)) From
     {
         New List(Of String) From
         {
-            "付星瑞", "余路成", "刘志强", "刘才育", "刘祥炜", "厉亚凯", "吴莉莉", "姚隽祺", "娄亚筱", "张恩铭",
-            "张林珏", "张梦琦", "徐溢聪", "朱玲俐", "李冠錡", "李鹏岗", "杨仕铌", "杨卯伟", "杨攀", "杨玲芳",
-            "杨谦益", "杨鑫雨", "林桢坤", "林科闯", "江莹", "沈鹏", "洪家闽", "王瑶", "王豪", "王轶蒙",
-            "胡泽楷", "莫梦月", "许腾飞", "谈奇灵", "谢琳洋", "赵政仰", "邱鸿伟", "郭欣宜", "闫金健", "陈心路",
-            "陈柏逸", "陈浩南", "陈芳琦", "项磊磊", "马雯", "高郁捷", "黄敏", "黄泽龙", "黄研培"
+            "万文杰", "余路成", "刘志强", "刘才育", "包洋", "厉亚凯", "叶玲榕", "吴莉莉", "周鑫", "唐甜",
+            "姚隽祺", "娄亚筱", "张恩铭", "张林珏", "张梦琦", "彭佳璇", "徐溢聪", "朱玲俐", "李冠錡", "李昊天",
+            "杨仕铌", "杨卯伟", "杨攀", "杨玲芳", "杨鑫雨", "林桢坤", "林科闯", "梁纤璐", "江莹", "洪家闽",
+            "王梦童", "王瑶", "王轶蒙", "王鹏", "胡泽楷", "苏杨", "莫梦月", "蒋黎", "许腾飞", "谈奇灵",
+            "谢琳洋", "郑嘉钰", "郑杰", "郭欣宜", "闫金健", "陆玉鑫", "陈心路", "陈拓林", "陈浩南", "陈芳琦",
+            "项磊磊", "马雯", "高郁捷", "黄嘉芃", "黄敏", "黄泽龙", "黄研培", "龚树想"
         },
         New List(Of String) From
         {
-            "吐尔洪江·吾拉木", "向阳", "周亮", "封辉", "张润涵", "杜颖", "杨仁琪", "林梓淇", "林高翔", "梁雁彤",
-            "楼伟涛", "汤昊", "王小丹", "翁小蒙", "莫仕弟", "萨娜", "邓铁龙", "陈子涵", "陈豪飞", "马修益",
-            "鲁浩伟"
+            "刘辉强", "吐尔洪江·吾拉木", "宿一曼", "封辉", "张思晴", "张润涵", "杜颖", "杨仁琪", "林梓淇", "林高翔",
+            "梁雁彤", "王小丹", "翁小蒙", "莫仕弟", "萨娜", "邓铁龙", "陈子涵", "陈豪飞", "马修益", "鲁浩伟"
         },
         New List(Of String) From
         {
-            "任思豪", "刘世林", "刘敏", "刘源", "危永平", "叶晓芳", "叶颖", "吴世明", "吴维", "周博语",
-            "周江鹏", "周鑫", "姚文龙", "宋欣格", "常青", "廖桂敏", "张为智", "张宗南", "张文琴", "张晨昊",
-            "张爱忠", "张耀宗", "张腾", "张裕祥", "曲善直", "曹宇", "曹硕", "李文翔", "李洪树", "李锦安",
-            "柳梦宇", "王颖萌", "程可扬", "程安琪", "程舒仪", "莫炳杰", "蒋中升", "蓝进肾", "赖麒鸿", "郑一帆",
-            "陈子龙", "陈铭禹", "陈阳", "马梦薇", "高扬钧", "黄健", "黄家新", "黄昱祺", "黄金理", "龚彬"
+            "任思豪", "刘世林", "刘启霖", "刘敏", "刘文博", "刘源", "刘金华", "危永平", "叶晓芳", "叶颖",
+            "吴世明", "周博语", "周江鹏", "姚文龙", "宋欣格", "常青", "廖桂敏", "张为智", "张姝卿", "张宗南",
+            "张文琴", "张晨昊", "张灵辉", "张耀宗", "张艺腾", "张裕祥", "曹宇", "曹硕", "曾国清", "李彦君",
+            "李文翔", "李欣如", "李洪树", "杨镇泽", "林旺康", "柳梦宇", "王必成", "王曼", "王颖萌", "程可扬",
+            "程安琪", "程舒仪", "莫炳杰", "蒋中升", "蓝进肾", "詹永萍", "赖麒鸿", "赵志国", "郑一帆", "郭叁育",
+            "陈垚", "陈子龙", "陈玮健", "陈紫怡", "陈阳", "马梦薇", "高扬钧", "黄健", "黄金理", "龚彬"
         }
     }
     Private StudentsUsed_ As New List(Of List(Of String)) From {New List(Of String), New List(Of String), New List(Of String)}
@@ -170,17 +169,9 @@ Public Class Form1
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Try
-            Process.Start(New ProcessStartInfo("https://kkmeeting.chn.moe") With {.UseShellExecute = True})
+            Process.Start(New ProcessStartInfo("https://blog.chn.moe/docs/stuff/lottery") With {.UseShellExecute = True})
         Catch ex As Exception
-            MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
-        End Try
-    End Sub
-
-    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
-        Try
-            Process.Start(New ProcessStartInfo("https://github.com/CHN-beta/group-meeting-lottery") With {.UseShellExecute = True})
-        Catch ex As Exception
-            MsgBox("调用浏览器失败，请手动使用浏览器访问kkmeeting.chn.moe。")
+            MsgBox("调用浏览器失败，请手动使用浏览器访问https://blog.chn.moe/docs/stuff/lottery。")
         End Try
     End Sub
 
