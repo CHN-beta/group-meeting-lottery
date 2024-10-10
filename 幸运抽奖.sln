@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "幸运抽奖", "幸运抽奖.vbproj", "{DF7EE13A-545F-47A8-A6F3-7643B10CFDC4}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "幸运抽奖", "幸运抽奖.vbproj", "{DF7EE13A-545F-47A8-A6F3-7643B10CFDC4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
