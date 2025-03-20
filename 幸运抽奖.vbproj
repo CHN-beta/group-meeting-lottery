@@ -9,6 +9,7 @@
     <ImportedNamespaces>OfficeOpenXml=False,System.Data=False,System.Drawing=False,System.Windows.Forms=False,Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,幸运抽奖=True</ImportedNamespaces>
     <OptionStrict>On</OptionStrict>
     <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon>index.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -26,6 +27,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <PlatformTarget>AnyCPU</PlatformTarget>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="index.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="OfficeOpenXml" />
